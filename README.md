@@ -1,48 +1,57 @@
 ---
 
+````markdown
 # 🛒 Comparador de Precios
 
-Este es mi proyecto personal: una aplicación web hecha con **Flask** que me permite comparar precios de productos en distintas tiendas online de Perú.
+Este es mi proyecto personal: una aplicación web hecha con **Flask** que me permite comparar precios de productos en distintas tiendas online de Perú.  
 La idea es escribir el nombre de un producto (por ejemplo: *“redmi note 9”*) y que la aplicación busque automáticamente en varias tiendas, mostrándome los precios y enlaces.
 
 Actualmente estoy scrapeando estas páginas:
 
-* Falabella
-* Hiraoka
-* Mercado Libre
-* Ripley
-* Coolbox
-* Plaza Vea
+* Falabella  
+* Hiraoka  
+* Mercado Libre  
+* Ripley  
+* Coolbox  
+* Plaza Vea  
 
 ---
 
-## 🚀 Cómo instalarlo
+## 🚀 Cómo instalarlo en **Windows**
 
-1. Primero clono el repositorio:
+1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/ComparadorPrecios.git
-cd ComparadorPrecios
-```
+git clone https://github.com/JPretellEco/Proyecto_Final_WebScrapping_Automatizacion.git
+cd Proyecto_Final_WebScrapping_Automatizacion
+````
 
-2. Luego creo mi entorno virtual e instalo las dependencias:
+2. Crear el entorno virtual:
 
 ```bash
 python -m venv venv
-source venv/bin/activate   # Linux/Mac
-venv\Scripts\activate      # Windows
+```
 
+3. Activar el entorno virtual (Windows):
+
+```bash
+venv\Scripts\activate
+```
+
+4. Instalar las dependencias:
+
+```bash
 pip install -r requirements.txt
 ```
 
-3. Después entro a la carpeta `src` y corro la aplicación Flask:
+5. Entrar a la carpeta `src` y correr la aplicación Flask:
 
 ```bash
 cd src
 python app.py
 ```
 
-4. Finalmente, abro el navegador en:
+6. Abrir el navegador en:
 
 ```
 http://127.0.0.1:5000
@@ -51,57 +60,38 @@ http://127.0.0.1:5000
 ---
 
 ## 📦 Estructura de mi proyecto
+
 ```
-ComparadorPrecios/
+Proyecto_Final_WebScrapping_Automatizacion/
 │
-├── .env                  # Variables de entorno (claves de API, etc.)
-├── .gitignore            # Archivos y carpetas a ignorar por Git
+├── .gitignore            # Archivos y carpetas ignoradas por Git
 ├── README.md             # Documentación del proyecto
 ├── requirements.txt      # Dependencias de Python
-├── run.py                # Punto de entrada para iniciar la aplicación
 │
-├── config/               # Configuraciones de la aplicación (dev, prod, etc.)
-│
-├── src/                  # Directorio principal del código fuente
-│   ├── __init__.py         # Hace que 'src' sea un paquete de Python
-│   │
-│   ├── app.py              # Creación y configuración de la instancia de Flask
-│   │
+├── src/                  # Código fuente principal
+│   ├── app.py              # Aplicación Flask
 │   ├── core/
-│   │   ├── __init__.py
 │   │   └── search.py       # Lógica principal que orquesta los scrapers
-│   │
 │   ├── scrapers/
-│   │   ├── __init__.py
 │   │   ├── coolbox.py
 │   │   ├── falabella.py
 │   │   ├── hiraoka.py
 │   │   ├── mercado_libre.py
 │   │   ├── plaza_vea.py
 │   │   └── ripley.py
-│   │
-│   ├── static/             # Archivos estáticos (CSS, JS, imágenes)
-│   │   ├── style.css
-│   │   └── logos/
-│   │       ├── coolbox.png
-│   │       └── ... (los demás logos)
-│   │
-│   ├── templates/          # Plantillas HTML de Jinja2
+│   ├── static/             # Logos e imágenes
+│   ├── templates/          # HTML con Jinja2
 │   │   └── index.html
-│   │
-│   └── utils/              # Funciones de ayuda reutilizables
-│       ├── __init__.py
-│       └── helpers.py
+│   └── notebooks/          # (opcional) pruebas y desarrollo en Jupyter
 │
-└── tests/                  # Pruebas unitarias y de integración
-    ├── __init__.py
-    └── test_helpers.py     # Ejemplo de archivo de prueba
+└── tests/                  # Pruebas unitarias
+```
 
 ---
 
 ## 📚 Dependencias
 
-En mi `requirements.txt` tengo lo siguiente:
+Mi archivo `requirements.txt` incluye:
 
 ```txt
 Flask==3.0.3
@@ -115,9 +105,14 @@ html5lib==1.1
 
 ---
 
-## ⚠️ Notas
+## ⚠️ Notas importantes
 
-* El scraping funciona siempre que las páginas no cambien su estructura HTML.
-* Para Selenium necesito tener **Google Chrome** instalado. El **webdriver-manager** se encarga de bajar el ChromeDriver automáticamente, así que no tengo que preocuparme por eso.
-* Algunas páginas pueden bloquear el scraping si detectan demasiado tráfico.
+* El scraping funciona mientras las páginas no cambien su estructura HTML.
+* Para **Selenium** necesito tener **Google Chrome** instalado.
 
+  * El paquete `webdriver-manager` descarga automáticamente el **ChromeDriver** compatible.
+* Algunas páginas pueden bloquear el scraping si detectan demasiado tráfico, así que lo uso solo con fines educativos.
+
+---
+
+```
