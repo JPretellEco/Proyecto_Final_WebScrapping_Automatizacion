@@ -4,8 +4,8 @@
 ````markdown
 # 🛒 Comparador de Precios
 
-Este es mi proyecto personal: una aplicación web hecha con **Flask** que me permite comparar precios de productos en distintas tiendas online de Perú.  
-La idea es escribir el nombre de un producto (por ejemplo: *“redmi note 9”*) y que la aplicación busque automáticamente en varias tiendas, mostrándome los precios y enlaces.
+Este es mi proyecto personal: una aplicación web hecha con Flask que me permite comparar precios de productos en distintas tiendas online de Perú.  
+La idea es escribir el nombre de un producto (por ejemplo: “redmi note 9”) y que la aplicación busque automáticamente en varias tiendas, mostrándome los precios y enlaces.
 
 Actualmente estoy scrapeando estas páginas:
 
