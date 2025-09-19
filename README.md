@@ -1,6 +1,3 @@
-Perfecto 🙌
-Te dejo el **README en primera persona**, como si tú mismo lo estuvieras explicando. Así queda más cercano y personal 👇
-
 ---
 
 # 🛒 Comparador de Precios
